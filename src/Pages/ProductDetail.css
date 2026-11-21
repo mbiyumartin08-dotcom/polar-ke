@@ -1,0 +1,25 @@
+.layout { display: flex; min-height: 100vh; background: #f8fafc; font-family: sans-serif; }
+.sidebar { width: 200px; background: #fff; padding: 20px; flex-shrink: 0; }
+.sidebar .active { background: #e8f5e9; padding: 8px 12px; border-radius: 8px; color: #16a34a; font-weight: bold; }
+.main { flex: 1; padding: 24px; }
+.back { text-decoration: none; color: #333; }
+.card { background: #fff; border-radius: 16px; padding: 24px; display: flex; gap: 24px; margin-top: 16px; }
+.product-img { width: 260px; height: 260px; object-fit: contain; background: #fef3c7; border-radius: 12px; padding: 20px; }
+.details { flex: 1; min-width: 260px; }
+.input { padding: 10px; border-radius: 8px; border: 1px solid #ddd; width: 140px; }
+.btn-green { background: #16a34a; color: #fff; border: none; padding: 10px 18px; border-radius: 8px; margin-left: 8px; font-weight: bold; cursor: pointer; }
+.btn-delete { margin-top: 16px; background: #fff; color: #ef4444; border: 1px solid #ef4444; padding: 10px 18px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+.success { color: green; }
+.hamburger { display: none; }
+.loading, .not-found { padding: 20px; }
+@media (max-width: 768px) {
+  .hamburger { display: block; position: fixed; top: 12px; left: 12px; z-index: 10; background: #16a34a; color: #fff; border: none; padding: 10px 14px; border-radius: 8px; font-size: 18px; }
+  .sidebar { display: none; position: fixed; top: 0; left: 0; height: 100%; z-index: 9; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+  .sidebar.open { display: block; }
+  .main { padding: 60px 16px 16px; }
+  .card { flex-direction: column; padding: 16px; }
+  .product-img { width: 100%; height: 220px; }
+  .input { width: 100%; margin-bottom: 10px; }
+  .btn-green { margin-left: 0; width: 100%; }
+  .btn-delete { width: 100%; }
+}
