@@ -1,16 +1,18 @@
-import { React } from 'react'
-import { BrowserRouter } from 'react-router-dom'
-import AddMenuForm from './components/AddMenuForm'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ProductProvider } from './context/ProductContext'
+import AddProduct from './components/AddProduct'
 import './App.css'
 
-function App () {
-
+function App() {
   return (
-    <>git 
-     <BrowserRouter>
-     <Route path="/add-menu" element={<AddMenuForm />} />
-     </BrowserRouter>
-    </>
+    <ProductProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AddProduct />} />
+          <Route path="/add-menu" element={<AddProduct />} />
+        </Routes>
+      </BrowserRouter>
+    </ProductProvider>
   )
 }
 
