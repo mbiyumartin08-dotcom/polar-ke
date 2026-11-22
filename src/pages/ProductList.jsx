@@ -8,7 +8,7 @@ export default function ProductList() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://localhost:3001/products")
+        fetch("https://localhost:3000/products")
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data);
